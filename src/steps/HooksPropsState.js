@@ -68,7 +68,7 @@ const steps = [
         <p>
           This part of the tutorial will focus on local state with <code>useState</code>.
         </p>
-        <p>Looking at our <code>{`<TopMenu />`}</code> component we can see that we're currently not tracking which menu item is active, but we're instead relying on the component to keep track of it for us.</p>
+        <p>Looking at our <code>{`TopMenu.js`}</code> component we can see that we're currently not tracking which menu item is active, but we're instead relying on the component to keep track of it for us.</p>
         <Code language='javascript'>
           {`
             return (
@@ -85,7 +85,7 @@ const steps = [
           `}
         </Code>
         <p>This works because we're using a matching <code>#href</code>, but if we want to control which menu item is active ourselves we'll need to add a <code>state</code> that we can use to set the active item.</p>
-        <p>Begin with import <code>useState</code> in the component:</p>
+        <p>Begin with adding an import of <code>{useState}</code> after <code>import React</code> in the component:</p>
         <Code language='javascript'>
           {`
             import React, {useState} from 'react'
