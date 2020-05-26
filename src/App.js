@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Container, Navbar, Row, Col, Jumbotron, NavDropdown, Nav, Alert} from 'react-bootstrap'
 import logo from './logo.svg';
 import './App.css';
-import {InitialSteps, BasicLayout, HooksPropsState} from './steps'
+import {InitialSteps, BasicLayout, HooksPropsState, Prereqs} from './steps'
 import {DemoApp} from './demo/DemoApp'
 
 function App() {
@@ -27,6 +27,8 @@ function App() {
             <Alert variant='info'>The use of react-bootstrap's components and layout might not be optimal since I'm trying it out for the first time.</Alert>
           </Col>
         </Row>
+        <h1 id='prereqs'>Before you start</h1>
+        <Prereqs />
         <h1 id='initialsteps'>Initial steps</h1>
         <InitialSteps />
         <h1 id='basiclayout'>Basic layout</h1>
@@ -48,6 +50,7 @@ function App() {
           <Navbar.Brand href='#home'>React Tutorial</Navbar.Brand>
           <Nav className='mr-auto'>
             <NavDropdown title='Tutorial'>
+              <NavDropdown.Item href='#prereqs' onClick={goToTutorial()}>Before you start</NavDropdown.Item>
               <NavDropdown.Item href='#initialsteps' onClick={goToTutorial()}>Initial steps</NavDropdown.Item>
               <NavDropdown.Item href='#basiclayout' onClick={goToTutorial()}>Basic layout</NavDropdown.Item>
               <NavDropdown.Item href='#hooksstateprops' onClick={goToTutorial()}>Hooks, state and props</NavDropdown.Item>

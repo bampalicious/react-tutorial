@@ -10,7 +10,7 @@ const steps = [
     title: '1. Top menu',
     text: (
       <>
-        <p>Create a new file called <code>TopMenu.js</code> and add the following import statements:</p>
+        <p>Create a new file in the <code>src</code> folder called <code>TopMenu.js</code> and add the following import statements:</p>
         <Code language='javascript'>
           {`
           import React from 'react'
@@ -35,7 +35,7 @@ const steps = [
           }
           `}
         </Code>
-        <p>Import the <code>{`<TopMenu />`}</code> component in <code>App.js</code> and replace the header with it:</p>
+        <p>Clean upp <code>App.js</code> by removing the old imports, then import the <code>{`<TopMenu />`}</code> component and replace the header with it:</p>
         <Code language='javascript'>
           {`
             import React from 'react'
@@ -68,6 +68,7 @@ const steps = [
         <Code language='javascript'>
           {`
             import React from 'react';
+            import {TopMenu} from './TopMenu'
             import {Container} from 'react-bootstrap'
             // Rest of the App.js code below
           `}
@@ -78,7 +79,7 @@ const steps = [
         <Code language='javascript'>
           {`
             return (
-              <TopNavigation />
+              <TopMenu />
               <Container><h1>This is a container</h1></Container>
             )
           `}
@@ -138,7 +139,7 @@ const steps = [
       <>
         <p>
           The current app looks rather empty so let's fix that by adding some more content.
-          First update the import statement from <strong>react-bootstrap</strong> with the following components:
+          First update the import statement from <strong>react-bootstrap</strong> in <code>App.js</code> with the following components:
         </p>
         <Code language='javascript'>
           {`
